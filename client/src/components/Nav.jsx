@@ -1,13 +1,14 @@
 import React from "react";
+import { icon } from "../assets/assets";
 
 export default function Nav() {
   return (
     <>
       <div className=" fixed w-full z-10 nav">
         <img src="" alt="" />
-        <ul className="flex flex-row gap-9 justify-end p-7 bg-blue-900 font-bold text-white">
+        <ul className="flex flex-row gap-9 justify-end p-7 bg-blue-900 font-bold text-white max-md:hidden ">
           <li>
-            <a href="">Home</a>
+            <a href="#">Home</a>
           </li>
           <li>
             <a href="#about">About</a>
@@ -36,6 +37,11 @@ export default function Nav() {
             <button>Register</button>
           </a>
         </ul>
+
+        {/* for mobile navigation */}
+        <div className="hidden max-md:flex justify-end bg-blue-800">
+          <img src={icon.menu} alt="menu" className="m-7" />
+        </div>
       </div>
     </>
   );

@@ -8,16 +8,18 @@ export default function About() {
       id="about"
       className="relative z-0 h-auto  py-[120px] items-center flex text-center flex-col gap-[6rem]"
     >
-      <section className="w-[60%] ">
-        <h1 className="font-bold text-5xl text-center">About {brand.name}</h1>
-        <article className="text-lg">
+      <section className="w-[60%] max-md:w-[80%]">
+        <h1 className="font-bold text-5xl text-center max-md:text-3xl max-md:mb-4">
+          About {brand.name}
+        </h1>
+        <article className="text-lg justify-normal">
           Tired of unreliable top-ups and slow transactions? At {brand.name}, we
           bring you a seamless, fast, and secure way to purchase airtime, data
           bundles, cable TV subscriptions, and electricity bills – all at
           unbeatable prices!
         </article>
       </section>
-      <section className="flex flex-row flex-wrap">
+      <section className="flex flex-row flex-wrap justify-center max-md:gap-[3rem] ">
         <Aboutcard
           image={card[0].image}
           title={card[0].title}
